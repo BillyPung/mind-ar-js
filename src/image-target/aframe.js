@@ -90,7 +90,9 @@ AFRAME.registerSystem('mindar-image-system', {
     navigator.mediaDevices.getUserMedia({audio: false, video: {
       facingMode: 'environment',
     }}).then((stream) => {
-      this.video.addEventListener( 'loadedmetadata', () => {
+		this.video.srcObject = n,
+		this.video.play(),
+        this.video.addEventListener( 'loadedmetadata', () => {
         //console.log("video ready...", this.video);
         this.video.setAttribute('width', this.video.videoWidth);
         this.video.setAttribute('height', this.video.videoHeight);
